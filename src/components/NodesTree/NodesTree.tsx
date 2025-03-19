@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import useNodesTree from '../../state/useNodesTree.tsx';
 import { TreeNode } from '../TreeNode/TreeNode.tsx';
 import { AddNodeModal } from '../Modals';

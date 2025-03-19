@@ -19,9 +19,7 @@ export const DeleteNodeModalView: React.FC<DeleteNodeModalViewProps> = (
 ) => {
   const { isOpen, nodeName, error, isLoading, onClose, onDeleteNode } = props;
   const [inputValue, setInputValue] = React.useState('');
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(event.target.value);
-  };
+
   return (
     <Modal isOpen={isOpen} title="Delete Node" onClose={onClose}>
       <div className={Styles.modalBody}>
