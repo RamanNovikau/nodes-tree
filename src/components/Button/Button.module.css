@@ -1,0 +1,108 @@
+/* base button style, default large */
+.button {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  border: none;
+  padding: 5px;
+}
+
+.large {
+  padding: 10px 40px;
+}
+
+.small {
+  padding: 5px 20px;
+}
+
+/* primary button style */
+.primary {
+  color: var(--white);
+}
+
+/* focus styles */
+
+.button:focus,
+.button:focus-visible {
+  outline-width: 2px;
+  outline-style: solid;
+}
+
+.blue {
+  outline-color: var(--blue-03);
+}
+
+.green {
+  outline-color: var(--white);
+}
+
+.red {
+  outline-color: var(--pink-02);
+}
+
+/* primary button style for blue color */
+.primary.blue {
+  background-color: var(--blue-01);
+}
+
+.primary.blue:hover {
+  background-color: var(--blue-02);
+}
+
+/* primary button style for red color */
+.primary.red {
+  background-color: var(--pink-01);
+}
+
+.primary.red:hover {
+  background-color: var(--red);
+}
+
+/* alternate button style */
+.alternate {
+  background-color: var(--white);
+  border: 1px solid;
+}
+
+/* alternate button style for blue color */
+.alternate.blue {
+  color: var(--blue-01);
+  border-color: var(--blue-01);
+}
+
+.alternate.blue:hover {
+  background-color: var(--blue-05);
+}
+
+.alternate.red {
+  color: var(--pink-01);
+  border-color: var(--pink-01);
+}
+
+.alternate.red:hover {
+  background-color: var(--pink-02);
+}
+
+.textButton {
+  border: none;
+  padding: 5px;
+}
+
+.textButton:focus {
+  outline: 0 !important;
+}
+
+/* textButton button style for blue color */
+.textButton.blue,
+.textButton.blue:hover {
+  color: var(--blue-02);
+  background-color: transparent;
+}
+
+/* textButton button style for red color */
+.textButton.red,
+.textButton.red:hover {
+  color: var(--red);
+  background-color: transparent;
+}

@@ -1,0 +1,18 @@
+.textInputElement {
+    border: 1px solid var(--gray-03);
+    height: 40px;
+    padding: 0 15px;
+    background: var(--white);
+    color: var(--gray-02);
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.textInputElement:focus,
+.textInputElement:focus-within,
+.textInputElement:focus-visible {
+    box-shadow: 0 0 0 1px var(--gray-01);
+    color: var(--gray-01);
+    outline: none;
+}
