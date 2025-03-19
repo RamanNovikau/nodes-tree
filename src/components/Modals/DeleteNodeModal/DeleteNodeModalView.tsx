@@ -11,14 +11,13 @@ export type DeleteNodeModalViewProps = {
   onClose: () => void;
   error: string | null;
   isLoading?: boolean;
-  onDeleteNode: (nodeName: string) => void;
+  onDeleteNode: () => void;
 };
 
 export const DeleteNodeModalView: React.FC<DeleteNodeModalViewProps> = (
   props,
 ) => {
   const { isOpen, nodeName, error, isLoading, onClose, onDeleteNode } = props;
-  const [inputValue, setInputValue] = React.useState('');
 
   return (
     <Modal isOpen={isOpen} title="Delete Node" onClose={onClose}>
@@ -55,8 +54,7 @@ export const DeleteNodeModalView: React.FC<DeleteNodeModalViewProps> = (
               <Button
                 className={Styles.modalButton}
                 onClick={() => {
-                  onDeleteNode(inputValue);
-                  setInputValue('');
+                  onDeleteNode();
                 }}
                 color={'red'}
                 size={'large'}
