@@ -28,14 +28,6 @@ export const NodesTree: React.FC = () => {
 
   const hasChildren = !!(nodesTree?.children && nodesTree.children.length);
 
-  if (isLoading) {
-    return <Spinner />;
-  }
-
-  if (error) {
-    return <span>{error}</span>;
-  }
-
   return (
     <>
       <div
