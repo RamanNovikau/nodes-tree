@@ -19,7 +19,6 @@ const useNodesTree = () => {
     setError(null);
     try {
       const data = await getTree();
-      console.log(data);
       setNodesTree(data);
     } catch (error) {
       setError(error?.response?.data?.data?.message || UNKNOWN_ERROR);
