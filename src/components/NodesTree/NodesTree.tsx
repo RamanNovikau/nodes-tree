@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import useNodesTree from '../../state/useNodesTree.tsx';
+import { useClickOutside } from '../../state/useClickOutside.ts';
 import { TreeNode } from '../TreeNode/TreeNode.tsx';
 import { AddNodeModal } from '../Modals';
 import { Icon } from '../Icons/Icons.tsx';
+import { Spinner } from '../Spinner/Spinner.tsx';
 
 import Styles from './NodesTree.module.css';
-import {useClickOutside} from "../../state/useClickOutside.ts";
 
 export const NodesTree: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -26,6 +27,14 @@ export const NodesTree: React.FC = () => {
   useClickOutside(ref, () => setIsSelected(false));
 
   const hasChildren = !!(nodesTree?.children && nodesTree.children.length);
+
+  if (isLoading) {
+    return <Spinner />;
+  }
+
+  if (error) {
+    return <span>{error}</span>;
+  }
 
   return (
     <>
